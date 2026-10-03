@@ -1,0 +1,6 @@
+CREATE DATABASE IF NOT EXISTS student_db;
+
+CREATE USER IF NOT EXISTS 'student_app'@'localhost' IDENTIFIED BY 'change-me';
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, INDEX, REFERENCES
+    ON student_db.* TO 'student_app'@'localhost';
+FLUSH PRIVILEGES;
